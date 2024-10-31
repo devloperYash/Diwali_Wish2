@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Diwali - The Festival of Lights</title>
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2021/03/15/21/54/lamp-6098162__340.png">
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Heading Styling */
+        .heading h1 {
+            font-size: 3rem;
+            color: #ffca28;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: glow 1.5s infinite alternate;
+            text-shadow: 0 0 10px #ffca28, 0 0 20px #ffca28, 0 0 30px #ffca28;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffca28, 0 0 20px #ffca28, 0 0 30px #ffca28;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffca28;
+            }
+        }
+
+        .lightsUpLeft, .lightsUpRight, .diwali_diyasLeft, .diwali_diyasRight, .lightsDownLeft, .lightsDownRight, .diyas {
+            width: 50px;
+            height: auto;
+            margin: 0 5px;
+        }
+
+        /* Typing Effect Styling */
+        .typing {
+            font-size: 1.5rem;
+            color: #ffeb3b;
+            margin-top: 20px;
+            border-right: 3px solid #ffca28;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite alternate;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            50% { border-color: transparent; }
+        }
+
+        /* Fade-in Effect for Family Greeting */
+        .family-greeting {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #b0bec5;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .footer {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .heading h1 { font-size: 2rem; }
+            .typing { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="heading">
+            <img src="https://cdn.pixabay.com/photo/2016/02/07/19/47/diwali-1185462__340.jpg" alt="lightsUpLeft" class="lightsUpLeft">
+            <img src="https://cdn.pixabay.com/photo/2016/02/07/19/47/diwali-1185462__340.jpg" alt="lightsUpRight" class="lightsUpRight">
+            <h1>
+                <img src="https://cdn.pixabay.com/photo/2018/11/16/17/40/diya-3819907__340.jpg" alt="diwali_diyasLeft" class="diwali_diyasLeft">
+                &nbsp; Happy Diwali &nbsp;
+                <img src="https://cdn.pixabay.com/photo/2018/11/16/17/40/diya-3819907__340.jpg" alt="diwali_diyasRight" class="diwali_diyasRight">
+            </h1>
+        </div>
+
+        <div class="content">
+            <h2 class="typing">“As the festival of lights brightens the world, may your life be filled with joy, love, and prosperity.<br> Happy Diwali to you and your family!”</h2>
+            <div class="family-greeting">With heartfelt wishes from the Lawankar Family</div>
+            <img src="https://cdn.pixabay.com/photo/2016/02/07/19/47/diwali-1185462__340.jpg" alt="lightsDownLeft" class="lightsDownLeft">
+            <img src="https://cdn.pixabay.com/photo/2016/02/07/19/47/diwali-1185462__340.jpg" alt="lightsDownRight" class="lightsDownRight">
+            <img src="https://cdn.pixabay.com/photo/2015/10/12/02/26/diwali-983363__340.jpg" alt="diyas" class="diyas">
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2024 DevloperYash. All rights reserved.
+    </div>
+</body>
+
+</html>
