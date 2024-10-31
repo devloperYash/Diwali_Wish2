@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Diwali - The Festival of Lights</title>
     <link rel="icon" href="https://cdn.pixabay.com/photo/2021/03/15/21/54/lamp-6098162__340.png">
     <style>
@@ -14,9 +15,8 @@
             background-color: #222;
             color: #fff;
             text-align: center;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
         }
 
         .main-content {
@@ -25,9 +25,9 @@
 
         /* Heading Styling */
         .heading h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #ffca28;
-            margin-top: 20px;
+            margin: 20px 0; /* Adjusted margin for spacing */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,10 +37,10 @@
 
         @keyframes glow {
             from {
-                text-shadow: 0 0 10px #ffca28;
+                text-shadow: 0 0 10px #ffca28, 0 0 20px #ffca28, 0 0 30px #ffca28;
             }
             to {
-                text-shadow: 0 0 20px #fff;
+                text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffca28;
             }
         }
 
@@ -54,11 +54,12 @@
         .typing {
             font-size: 1.5rem;
             color: #ffeb3b;
-            margin-top: 20px;
+            margin: 20px 0; /* Adjusted margin for spacing */
             border-right: 3px solid #ffca28;
             white-space: nowrap;
             overflow: hidden;
             animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite alternate;
+            display: inline-block; /* Ensure p tags behave like block elements */
         }
 
         @keyframes typing {
@@ -89,23 +90,32 @@
             margin-top: 10px;
         }
 
-        /* Responsive Design for Smaller Screens */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .heading h1 { font-size: 2rem; }
+            .heading h1 { font-size: 2.5rem; }
             .typing { font-size: 1.2rem; }
-            .family-greeting { font-size: 0.9rem; }
             .lightsUpLeft, .lightsUpRight, .diwali_diyasLeft, .diwali_diyasRight, .lightsDownLeft, .lightsDownRight, .diyas {
-                width: 40px; /* Adjust images for medium screens */
+                width: 40px; /* Adjust image size for smaller screens */
             }
-            .main-content { padding: 10px; }
+            .family-greeting {
+                font-size: 0.9rem; /* Adjust family greeting font size */
+            }
         }
 
         @media (max-width: 480px) {
-            .heading h1 { font-size: 1.6rem; }
+            .heading h1 { font-size: 2rem; }
             .typing { font-size: 1rem; }
-            .family-greeting { font-size: 0.8rem; }
             .lightsUpLeft, .lightsUpRight, .diwali_diyasLeft, .diwali_diyasRight, .lightsDownLeft, .lightsDownRight, .diyas {
-                width: 30px; /* Further adjust images for small screens */
+                width: 30px; /* Further adjust image size for very small screens */
+            }
+            .family-greeting {
+                font-size: 0.8rem; /* Adjust family greeting font size */
+            }
+            .content {
+                padding: 0 5px; /* Add padding for small screens */
+            }
+            .main-content {
+                padding: 10px; /* Reduce padding for small screens */
             }
         }
     </style>
@@ -124,9 +134,9 @@
         </div>
 
         <div class="content">
-            <p class="typing">As the festival of lights brightens the world...</p>
-            <p class="typing">...may your life be filled with joy, love, and prosperity.</p>
-            <p class="typing">Happy Diwali to you and your family!</p>
+            <p class="typing">“As the festival of lights brightens the world,</p>
+            <p class="typing">may your life be filled with joy, love, and prosperity.</p>
+            <p class="typing">Happy Diwali to you and your family!”</p>
             <div class="family-greeting">With heartfelt wishes from the Lawankar Family</div>
             <img src="https://cdn.pixabay.com/photo/2016/02/07/19/47/diwali-1185462__340.jpg" alt="lightsDownLeft" class="lightsDownLeft">
             <img src="https://cdn.pixabay.com/photo/2016/02/07/19/47/diwali-1185462__340.jpg" alt="lightsDownRight" class="lightsDownRight">
