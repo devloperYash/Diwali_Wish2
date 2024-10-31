@@ -15,6 +15,8 @@
             background-color: #222;
             color: #fff;
             text-align: center;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
         }
 
         .main-content {
@@ -89,8 +91,25 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .heading h1 { font-size: 2rem; }
+            .heading h1 { font-size: 2.5rem; }
             .typing { font-size: 1.2rem; }
+            .lightsUpLeft, .lightsUpRight, .diwali_diyasLeft, .diwali_diyasRight, .lightsDownLeft, .lightsDownRight, .diyas {
+                width: 40px; /* Adjust image size for smaller screens */
+            }
+            .family-greeting {
+                font-size: 0.9rem; /* Adjust family greeting font size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .heading h1 { font-size: 2rem; }
+            .typing { font-size: 1rem; }
+            .lightsUpLeft, .lightsUpRight, .diwali_diyasLeft, .diwali_diyasRight, .lightsDownLeft, .lightsDownRight, .diyas {
+                width: 30px; /* Further adjust image size for very small screens */
+            }
+            .family-greeting {
+                font-size: 0.8rem; /* Adjust family greeting font size */
+            }
         }
     </style>
 </head>
@@ -108,7 +127,7 @@
         </div>
 
         <div class="content">
-            <h2 class="typing">“As the festival of lights brightens the world, may your life be filled with joy, love, and prosperity.<br> Happy Diwali to you and your family!”</h2>
+            <h2 class="typing">“As the festival of lights brightens the world, may your life<br> be filled with joy, love, and prosperity. Happy Diwali to you and your family!”</h2>
             <div class="family-greeting">With heartfelt wishes from the Lawankar Family</div>
             <img src="https://cdn.pixabay.com/photo/2016/02/07/19/47/diwali-1185462__340.jpg" alt="lightsDownLeft" class="lightsDownLeft">
             <img src="https://cdn.pixabay.com/photo/2016/02/07/19/47/diwali-1185462__340.jpg" alt="lightsDownRight" class="lightsDownRight">
